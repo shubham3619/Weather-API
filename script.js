@@ -9,14 +9,15 @@ weatherInfo.style.display = 'none';
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showWeather, showError);
-    introPage.style.display = 'none';
-    weatherInfo.style.display = 'flex';
+    
   } else {
     alert("Geolocation is not supported by this browser.");
   }
 }
 
 function showWeather(position) {
+  introPage.style.display = 'none';
+  weatherInfo.style.display = 'flex';
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   showLetLong(latitude, longitude);
@@ -34,10 +35,11 @@ function showLetLong(lat, long) {
 
 function showMap (lat, long) {
   const mapIFrame = document.getElementById('iframe');
-  mapIFrame.src = `https:maps.google.com/maps?q=${lat}, ${long}&z=15&output=embed`
+  mapIFrame.src = `https:maps.google.com/maps?q=${lat},${long}&z=15&output=embed`;
 }
 
 function showError(error) {
+  weatherInfo.style.display = 'none';
   let message = "";
 
   switch (error.code) {
