@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro-page" id="intro-page">
+        <h1>Weather Api</h1>
+        <button type="submit" id="fetch-btn">Fetch Data</button>
+    </div>
+    <div id="weather-info">
+        <h1>Welcome To The Weather App</h1>
+        <p>Here is your current location</p>
+        <div id="let-long">
+            <!-- dynamically data  -->
+        </div>
+        <iframe id="iframe" frameborder="0"></iframe>
+
+        <div id="weather-data">
+            <h1>Your Weather Data</h1>
+            <ul id="list">
+                <li id="name"></li>
+                <li id="humidity"></li>
+                <li id="time-zone"></li>
+                <li id="pressure"></li>
+                <li id="sky"></li>
+                <li id="temp"></li>
+                <li id="feels-like"></li>
+                <li id="windspeed"></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
